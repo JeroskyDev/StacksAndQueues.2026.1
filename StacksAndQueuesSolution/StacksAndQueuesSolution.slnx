@@ -1,1 +1,4 @@
-<Solution />
+<Solution>
+  <Project Path="SAQ.Backend/SAQ.Backend.csproj" Id="c2134dee-115e-4c61-bf3a-a5e038ce3021" />
+  <Project Path="SAQ.Frontend/SAQ.Frontend.csproj" Id="bd07119d-a0d2-4b96-995a-245ec38b1c30" />
+</Solution>
