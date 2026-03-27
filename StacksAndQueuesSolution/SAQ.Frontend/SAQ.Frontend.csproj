@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QueuesUsingArrays\QueuesUsingArrays.csproj" />
     <ProjectReference Include="..\SAQ.Backend\SAQ.Backend.csproj" />
   </ItemGroup>
 

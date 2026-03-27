@@ -1,4 +1,6 @@
-﻿using SAQ.Backend;
+﻿/*
+Stacks
+using SAQ.Backend;
 
 //var stack = new StackUsingArray<string>(5);
 //var stack = new StackUsingList<string>(); //Lists doesn´t have a size, they just get values in them, so that´s why we don´t put any number in the parenthesis.
@@ -53,6 +55,62 @@ string Menu()
     Console.WriteLine("1. Apilar");
     Console.WriteLine("2. Desapilar");
     Console.WriteLine("3. Ver tope");
+    Console.WriteLine("0. Salir");
+    Console.Write("Digite su opción: ");
+    return Console.ReadLine() ?? string.Empty;
+}
+*/
+
+using QueuesUsingArrays;
+
+//var stack = new StackUsingArray<string>(5);
+//var stack = new StackUsingList<string>(); //Lists doesn´t have a size, they just get values in them, so that´s why we don´t put any number in the parenthesis.
+var queue = new QueueUsingArray<string>(5); //built-in stack of C#, it is implemented using a linked list, so it is dynamic and can grow as needed, but it has a maximum capacity of memory.
+var option = string.Empty;
+
+do
+{
+    option = Menu();
+    switch (option)
+    {
+        case "1":
+            try
+            {
+                Console.Write("Digite el elemento a encolar: ");
+                var element = Console.ReadLine() ?? string.Empty;
+                queue.Enqueue(element);
+                Console.WriteLine($"Elemento '{element}' encolado.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            break;
+        case "2":
+            try
+            {
+                var dequeuedElement = queue.Dequeue();
+                Console.WriteLine($"Elemento '{dequeuedElement}' ha sido desencolado.");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            break;
+        case "0":
+            Console.WriteLine("Saliendo del programa...");
+            break;
+        default:
+            Console.WriteLine("Opción no válida. Por favor, intentelo de nuevo...");
+            break;
+    }
+} while (option != "0");
+
+string Menu()
+{
+    Console.WriteLine("--- PILAS ---");
+    Console.WriteLine("1. Encolar");
+    Console.WriteLine("2. Desencolar");
     Console.WriteLine("0. Salir");
     Console.Write("Digite su opción: ");
     return Console.ReadLine() ?? string.Empty;
