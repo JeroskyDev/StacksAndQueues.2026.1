@@ -1,12 +1,14 @@
 ﻿using SAQ.Backend;
 
-var stack = new StackUsingArray<string>(5);
+//var stack = new StackUsingArray<string>(5);
+//var stack = new StackUsingList<string>(); //Lists doesn´t have a size, they just get values in them, so that´s why we don´t put any number in the parenthesis.
+var stack = new Stack<string>(); //built-in stack of C#, it is implemented using a linked list, so it is dynamic and can grow as needed, but it has a maximum capacity of memory.
 var option = string.Empty;
 
 do
 {
     option = Menu();
-    switch(option)
+    switch (option)
     {
         case "1":
             Console.Write("Digite el elemento a apilar: ");
