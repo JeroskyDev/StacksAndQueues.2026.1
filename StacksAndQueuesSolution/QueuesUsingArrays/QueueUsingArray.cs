@@ -1,6 +1,6 @@
 ﻿namespace QueuesUsingArrays;
 
-public class QueueUsingArray<T>
+public class QueueUsingArray<T> : IQueue<T>
 {
     private T[] _queue; //cola
     private int _front; //elemento al frente

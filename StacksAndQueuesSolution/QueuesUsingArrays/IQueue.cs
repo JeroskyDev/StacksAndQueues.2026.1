@@ -4,7 +4,8 @@ using System.Text;
 
 namespace QueuesUsingArrays;
 
-public interface IQueue
+public interface IQueue<T>
 {
-
+    T Dequeue();
+    void Enqueue(T item);
 }
