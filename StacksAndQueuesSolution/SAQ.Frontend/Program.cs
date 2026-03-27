@@ -61,11 +61,11 @@ string Menu()
 }
 */
 
-using QueuesUsingArrays;
+using SAQ.Backend;
 
 //var stack = new StackUsingArray<string>(5);
 //var stack = new StackUsingList<string>(); //Lists doesn´t have a size, they just get values in them, so that´s why we don´t put any number in the parenthesis.
-var queue = new QueueUsingArray<string>(5); //built-in stack of C#, it is implemented using a linked list, so it is dynamic and can grow as needed, but it has a maximum capacity of memory.
+var queue = new Queue<string>(); //built-in Queues of C#, it is implemented using a linked list, so it is dynamic and can grow as needed, but it has a maximum capacity of memory.
 var option = string.Empty;
 
 do
